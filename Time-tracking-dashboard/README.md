@@ -1,6 +1,6 @@
-# Frontend Mentor - QR code component solution
+# Frontend Mentor - Time tracking dashboard solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -47,17 +47,11 @@ grid-template-areas:
     ;
 ```
 
-
-
-
 I learned how to use the ternary operator to determine if it's supporsed to show "hr" or "hrs"
 
 ```js
 data[0]["timeframes"][state]["current"] > 1 ? "hrs" : "hr"
 ```
-
-
-
 
 I learnd how to use Emmet to wright my html code quickly
 
