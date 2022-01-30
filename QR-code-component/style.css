@@ -13,6 +13,11 @@ body {
 }
 
 .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -23,6 +28,18 @@ body {
     background-color: hsl(0, 0%, 100%);
     border-radius: 20px;
     box-shadow: 0 0 70px 5px rgba(199, 199, 199, 0.658);
+    transition: all linear 300ms;
+}
+
+.anim .front {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotateY(360deg);
+}
+
+
+.anim .back {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateY(360deg);
 }
 
 img {
@@ -31,7 +48,11 @@ img {
     max-width: min(290px, 85vw);
 }
 
-h3, p {
+.fr {
+    filter: hue-rotate(50deg);
+}
+
+h1, p {
     font-size: min(22px, 10vw);
     font-weight: 700;
     margin: 10px 20px;
@@ -47,7 +68,18 @@ p {
     color: hsl(220, 15%, 55%);
     }
 
+button {
+    border: 0;
+    background-color: #3685FF;
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: #296fd8;
+}
 
 .attribution {
     font-size: 11px;
