@@ -72,7 +72,8 @@ body {
 h1 {
     margin: 0 0 0 25px;
     color: white;
-    font-size: 1.5rem;   
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 h1:hover {
@@ -133,6 +134,7 @@ h1:hover {
 
 .creator span {
     color: white;
+    cursor: pointer;
 }
 
 .creator span:hover {
@@ -146,6 +148,9 @@ input {
     border-radius: 15px;
     color: hsl(215, 51%, 70%);
     text-align: center;
+    width: 50px;
+    margin: 0 auto;
+    transition: width .3s ease-in-out;
 }
 
 ::placeholder {
@@ -156,4 +161,5 @@ input {
 
 input:focus {
     outline: none;
+    width: 275px;
 }
