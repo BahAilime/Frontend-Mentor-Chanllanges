@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
@@ -15,19 +15,56 @@
   </style>
 </head>
 <body>
-
-  Equilibrium #3429
-
+  <div class="card">
+    <div class="art">
+      <div class="hover">
+        <div class="img-art"></div>
+        <img src="images/icon-view.svg" alt="view" class="view">
+      </div>
+    </div>
+    <h1 id="name">Equilibrium #3429</h1>
+    <p class="txt">
   Our Equilibrium collection promotes balance and calm.
+    </p>
+    
+     <div class="flex">
+        
+           <p class="txt-ether"><img src="images/icon-ethereum.svg" alt="icon-ethereum" class="icon ether">0.041 ETH</p>
+       
+           <p class="txt-clock"><img src="images/icon-clock.svg" alt="icon-clock" class="icon clock"> 3 days left</p>
+     </div>
+    <div class="creator">
+      <p><img src="images/image-avatar.png" alt="image-avatar" class="pfp">Creation of <span>Jules Wyvern</span></p>
+    </div>
+  </div>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+  <input type="text" id="input" placeholder="Search">
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script defer>
+    document.getElementById("input").addEventListener("input", function(e) {nft(parseInt(e.target.value))})
+    
+    document.getElementById("name").addEventListener("click", (e) => {
+      let nb = Math.floor(Math.random() * 3428)
+      nft(nb)
+    })
+    
+    function nft(nb) {
+      if (!(nb > 0 && nb < 3430)) {
+        nb=0
+        document.getElementById("input").value = ""
+      }
+      
+      let nb2 = (nb/3428*60)+90
+      document.querySelector(".img-art").style.filter = `hue-rotate(${nb}deg) saturate(${nb2}%)`
+      document.querySelector("#name").innerText = `Equilibrium #${nb}`
+      document.querySelector(".txt-ether").innerHTML = `<img src="images/icon-ethereum.svg" alt="icon-ethereum" class="icon ether">0.0` + (70-2*Math.floor(nb/100)) + " ETH"
+      document.querySelector(".txt-clock").innerHTML = `<img src="images/icon-clock.svg" alt="icon-clock" class="icon clock"> ` + (parseInt(Math.floor(nb/1000))+1) + " days left"
+    }
+  </script>
 </body>
 </html>
