@@ -1,0 +1,159 @@
+* {
+    font-family: sans-serif;
+    user-select: none;
+    
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+}
+
+.hover {
+    width: 250px;
+    height: 250px; 
+    margin: 25px auto;
+    background: hsla(178, 100%, 50%, 0.5);
+    border-radius: 10px;
+    position: relative;
+}
+
+.img-art {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px; 
+    margin: 25px auto;
+    
+    border-radius: 10px;
+    background: url("images/image-equilibrium.jpg");
+    background-size: contain;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover:hover .img-art {
+    opacity: .25;
+}
+
+.hover:hover .view {
+    z-index: 20;
+}
+
+.view {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -9;
+}
+
+.img-art:hover .view {
+    z-index: 2;
+}
+
+h1 {
+    margin: 0 0 0 25px;
+    color: white;
+    font-size: 1.5rem;   
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.txt {
+    color: hsl(215, 51%, 70%);
+    margin: 10px 0 0 25px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25px;
+}
+
+.pfp {
+    margin: -10px 5%;
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.flex :nth-child(1) {
+    margin-right: 5px;
+    color: hsl(178, 100%, 50%);
+}
+
+
+.flex :nth-child(2) {
+    color: hsl(215, 51%, 70%);
+}
+
+.icon {
+    transform: translateY(3px);
+}
+
+.clock {
+    transform: translate(7px, 3px);
+
+}
+
+.creator {
+    border-top: 1px solid hsl(215, 32%, 27%);
+    margin: 0 25px;
+    padding-top: 5px;
+}
+
+.creator p {
+    color:hsl(215, 51%, 70%);
+    transform: translateY(-3px);
+}
+
+.creator img {
+    transform: translateY(3px);
+}
+
+.creator span {
+    color: white;
+}
+
+.creator span:hover {
+    color: hsl(178, 100%, 50%)
+}
+
+input {
+    border: none;
+    background-color: hsl(216, 50%, 16%);
+    padding: 10px;
+    border-radius: 15px;
+    color: hsl(215, 51%, 70%);
+    text-align: center;
+}
+
+::placeholder {
+    opacity: 1;
+    color: hsl(215, 51%, 70%);
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
