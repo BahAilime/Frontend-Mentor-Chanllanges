@@ -17,14 +17,12 @@
     --color-equal: white;
     --color-key: hsl(221, 14%, 31%);
     --color-result: white;
-
-    font-family: 'Spartan', sans-serif;
-  }
+}
 
 * {
     font-family: 'Spartan', sans-serif;
     line-height: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     transition: color linear .3s, background-color linear .3s, border-color linear .3s, transform linear .05s;
     
 }
@@ -38,15 +36,21 @@ body {
     height: 100vh;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
 .calculatrice {
-    width: clamp(350px, 100vw, 550px);
-    height: clamp(500px, 100vh, 750px);
+    width: clamp(250px, 90vw, 550px);
+    height: clamp(450px, 90vh, 750px);
     padding: 1rem;
     display: grid;
     grid-template-rows: 1fr 1fr 8fr;
     gap: 20px;
     margin: 0 auto;
 }
+
+
 
 /* =======
 UPPER PART
@@ -81,7 +85,7 @@ THEME SELECTOR
 
 .range-bg {
     background-color: var(--bg-keypad);
-    width: 85px;
+    width: 95px;
     height: 25px;
     border-radius: 50px;
     display: grid;
@@ -93,7 +97,7 @@ THEME SELECTOR
 input[type='range'] {
     -webkit-appearance: none;
     background-color: transparent;
-    width: 70px;
+    width: 80px;
     position: relative;
 }
 
@@ -106,8 +110,8 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 input[type='range']::after {
-    content: "1 2 3 4";
-    word-spacing: 8px;
+    content: "1 2 3 4 5";
+    word-spacing: 5px;
     position: absolute;
     top: -20px;
     color: var(--color-calc);
@@ -204,13 +208,17 @@ ATTRIBUTION
 ======== */
 
 .attribution {
-font-size: 11px;
+    line-height: 1.5;
+COLOR: hsl(30, 25%, 89%);
+font-size: 14px;
 text-align: center;
-bottom: 25px;
-width: 95vw;
+width: 100%;
 font-family: sans-serif;
+margin: 20px 0px 30px;
+word-wrap: break-word;
+
 }
 
 .attribution a {
-    color: #009090 !important;
+    color: hsl(6, 63%, 50%) !important;
 }

@@ -3,17 +3,36 @@ const correction = (str) => {
 	for (const lettre of str) {
 		if (["+", "-", "/", "*"].includes(lettre)) {
 			ah.push(lettre)
+		
+		} else if (lettre === "(") {
+			if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ")"].includes(ah[ah.length - 1][ah.length - 1])) {
+				console.log("uwu");
+				ah.push("*")
+				ah.push(lettre)
+			
+			} else {
+				ah.push(lettre)
+			}
+		
+
 		} else if (["+", "-", "/", "*"].includes(ah[ah.length - 1])) {
 			ah.push(lettre)
+		
 		} else {
 			ah[ah.length - 1] = ah[ah.length - 1] + lettre
 		}
 	}
-	return ah
+	
+	ah = ah
 		.map((e) => {
 			return isNaN(Number(e)) ? e : Number(e)
 		})
 		.join("")
+	
+	if (ah[0] === "0") {ah = ah.substring(1)}
+	else {console.log({"ah": typeof(ah)});}
+	
+	return ah
 }
 
 function multiReplace (str, dict = {}) {
@@ -194,6 +213,24 @@ function themechange() {
 		root.setProperty("--del-shadow", "hsl(20, 100%, 65%)")
 		root.setProperty("--equal-bg", "hsl(42, 100%, 71%)")
 		root.setProperty("--equal-shadow", "hsl(42, 100%, 61%)")
+
+		root.setProperty("--color-calc", "white")
+		root.setProperty("--color-del", "white")
+		root.setProperty("--color-equal", "white")
+		root.setProperty("--color-key", "white")
+		root.setProperty("--color-result", "white")
+	
+	} else if (theme == 4) {
+		root.setProperty("--bg-main", "hsl(197, 98%, 40%)")
+		root.setProperty("--bg-keypad", "hsl(348, 79%, 76%)")
+		root.setProperty("--bg-screen", "hsl(348, 79%, 76%)")
+
+		root.setProperty("--normal-bg", "hsl(197, 94%, 67%)")
+		root.setProperty("--normal-shadow", "hsl(197, 94%, 47%)")
+		root.setProperty("--del-bg", "hsl(197, 94%, 47%)")
+		root.setProperty("--del-shadow", "hsl(197, 94%, 37%)")
+		root.setProperty("--equal-bg", "hsl(197, 94%, 77%)")
+		root.setProperty("--equal-shadow", "hsl(197, 94%, 67%)")
 
 		root.setProperty("--color-calc", "white")
 		root.setProperty("--color-del", "white")
