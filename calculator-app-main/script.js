@@ -151,6 +151,8 @@ function themechange() {
 	let theme = document.getElementById("theme").value
 	let root = document.documentElement.style
 
+	localStorage.setItem("theme", theme)
+
 	if (theme == 0) {
 		root.setProperty("--bg-main", "hsl(222, 26%, 31%)")
 		root.setProperty("--bg-keypad", "hsl(223, 31%, 20%)")
@@ -238,4 +240,11 @@ function themechange() {
 		root.setProperty("--color-key", "white")
 		root.setProperty("--color-result", "white")
 	}
+}
+
+
+let started = false
+if (!started) {
+	started = true
+	document.getElementById("theme").value = localStorage.getItem("theme")
 }
