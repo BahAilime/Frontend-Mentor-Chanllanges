@@ -243,8 +243,7 @@ function themechange() {
 }
 
 
-let started = false
-if (!started) {
-	started = true
-	document.getElementById("theme").value = localStorage.getItem("theme")
-}
+
+started = true
+document.getElementById("theme").value = localStorage.getItem("theme")
+themechange()
