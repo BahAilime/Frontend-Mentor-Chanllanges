@@ -38,7 +38,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### What I learned
 
-I leaned how to use `grid-template-areas` to created a complex grid easely
+I leaned how to use `grid-template-areas` to created complex grids easely
 
 ```css
 grid-template-areas: 
@@ -53,7 +53,7 @@ I learned how to use the ternary operator to determine if it's supporsed to show
 data[0]["timeframes"][state]["current"] > 1 ? "hrs" : "hr"
 ```
 
-I learnd how to use Emmet to wright my html code quickly
+I learnd how to use Emmet to write my html code more quickly
 
 .action>img.icon+div>p.title+p.dots{...}+p.h+p.l
 ```html
