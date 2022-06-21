@@ -5,6 +5,7 @@
 - [Time tracking dashboard](#time-tracking-dashboard)
 - [NFT preview card component](#nft-preview-card-component)
 - [Calculator app](#calculator-app)
+- [Interactive rating component](#interactive-rating-component)
 
 
 # QR-code-component
@@ -31,7 +32,7 @@ I added a button whitch translates the text from english to french with a spinni
     - `script.js` (main js file)
 ## Tweak
 I added two additionnal layers of responsiveness using `media queries`
-# NFT-preview-card-component
+# NFT preview card component
 - **Live URL:** [github-pages](https://bahailime.github.io/Frontend-Mentor-Chanllanges/nft-preview-card-component/)
 - **Source code:** [GitHub](https://github.com/BahAilime/Frontend-Mentor-Chanllanges/tree/main/nft-preview-card-component)
 ## Descrition from Frontend Mentor
@@ -42,7 +43,7 @@ I added two additionnal layers of responsiveness using `media queries`
   - JS
 ## Tweak
 You can generate random alterations by clicking on it's name or seach for a specific one by using the input at the bottom. It will affect its price and the numbers of days left to buy it.
-# Calculator-app
+# Calculator app
 - **Live URL:** [github-pages](https://bahailime.github.io/Frontend-Mentor-Chanllanges/calculator-app-main/)
 - **Source code:** [GitHub](https://github.com/BahAilime/Frontend-Mentor-Chanllanges/tree/main/calculator-app-main)
 ## Descrition from Frontend Mentor
@@ -57,7 +58,17 @@ You can generate random alterations by clicking on it's name or seach for a spec
 - I made the calculation safe
   - by converting numbers like `0011` into `11` instead of `9`
   - by allowing calculs using parenthesis as multiplication operator like Ex: `5(10) = 50` / `(10)(10) = 100`
-- I made it possible to use the keyboard keys to 
+- I made it possible to use the keyboard keys
 
-<!-- ## Descrition from Frontend Mentor
->This is a nice, small project to practice handling user interactions and updating the DOM. Perfect for anyone who has learned the basics of JavaScript! -->
+# Interactive rating component
+- **Live URL:** [github-pages](https://bahailime.github.io/Frontend-Mentor-Chanllanges/)
+- **Source code:** [GitHub](https://github.com/BahAilime/Frontend-Mentor-Chanllanges/)
+## Descrition from Frontend Mentor
+>This is a nice, small project to practice handling user interactions and updating the DOM. Perfect for anyone who has learned the basics of JavaScript!
+## Techologies I have used
+  - HTML
+  - CSS
+  - JS
+## Tweak
+- I changed the submit button to practice using the ::after pseudo element
+- I made the image from the "thank you" part (`illustration-thank-you.svg`) move up and down
