@@ -61,8 +61,8 @@ You can generate random alterations by clicking on it's name or seach for a spec
 - I made it possible to use the keyboard keys
 
 # Interactive rating component
-- **Live URL:** [github-pages](https://bahailime.github.io/Frontend-Mentor-Chanllanges/)
-- **Source code:** [GitHub](https://github.com/BahAilime/Frontend-Mentor-Chanllanges/)
+- **Live URL:** [github-pages](https://bahailime.github.io/Frontend-Mentor-Chanllanges/interactive-rating-component/)
+- **Source code:** [GitHub](https://github.com/BahAilime/Frontend-Mentor-Chanllanges/interactive-rating-component/)
 ## Descrition from Frontend Mentor
 >This is a nice, small project to practice handling user interactions and updating the DOM. Perfect for anyone who has learned the basics of JavaScript!
 ## Techologies I have used
