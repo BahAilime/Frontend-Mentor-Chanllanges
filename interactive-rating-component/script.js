@@ -14,6 +14,10 @@ for (btn of btns.children) {
 sub.addEventListener("click", (e) => {
     document.querySelector(".stars").classList.toggle("transition", true)
     document.querySelector(".selected").innerText = getActive()
+    for (const elt of document.querySelectorAll(".nb")) {
+        elt.setAttribute('disabled', 'true')
+        elt.style.cursor = "default"
+    }
 })
 
 function getActive() {
